@@ -1,2 +1,2 @@
 # One-Page-Layout
-One page layout web page
+Landing page i created for SheCodes final project
