@@ -7,42 +7,120 @@
 
     <style>
       body {
-        /* font-family: Cerebri Sans, Helvetica, Arial, sans-serif; */
+        margin: 0;
+        background-color: #ffffff;
+      }
+
+      .plain-container {
+        background: #bddbf1;
+        padding: 20px;
+      }
+
+      .main-content {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        padding: 20px;
         text-align: center;
+        border-radius: 6px;
+      }
+
+      h1 {
+        color: rgb(8, 121, 162);
+        display: inline;
+      }
+
+      img {
+        border-radius: 4px;
+      }
+
+      p {
+        font-size: large;
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        line-height: 1.6;
+        text-align: justify;
+      }
+
+      button {
+        margin: 20px auto;
+        display: block;
+        color: #ffffff;
+        font-size: 20px;
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        background-color: rgb(8, 121, 162);
+        padding: 15px 20px;
+        border-radius: 300px;
+        border: 1px solid rgb(8, 121, 162);
+        transition: all 200ms ease-in-out;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+      }
+      button:hover {
+        opacity: 0.9;
+        cursor: pointer;
       }
     </style>
   </head>
   <body>
-    <div>
-      <h1>Kitchen Muse</h1>
-      <hr>
-      <h2>Explore Your Creativity by Cooking</h2>
-      <img
-        src="https://i.pinimg.com/564x/84/8b/a2/848ba2938b3ad792b0a4f3bf5c579ad3.jpg"
-        alt="cooking"
-        width="400"
-        height="400"
-      />
-      <p>
-        Welcome to my world, where coding and cooking collide in a delightful
-        mix. I'm a <strong>software developer</strong> who loves getting creative in the kitchen,
-        and I want you to join me in Exploring Your Creativity by Cooking. In
-        the day, I tackle the coding maze, and at night, my kitchen becomes a
-        playground for imagination. This space isn't just for developers—it's
-        for those who, like me, find joy in both fixing code and trying out new
-        flavors. Join our community, where the kitchen is a shared creative
-        haven. From quick tricks on busy workdays to fancy experiments on lazy
-        weekends, experience the satisfaction of balancing tech with taste.
-        Let's transform our kitchens into canvases where both code and cuisine
-        shine. <em>Unleash your inner coder-chef—explore, experiment, and relish the
-        tasty results</em>. Your coding masterpieces and culinary delights await, and
-        I'm thrilled to embark on this journey with you!
-        <br/>
-        <a href="https://www.liketocook.com/benefits-of-cooking/">Cook for your mind</a>
-      </p>
-      
-      <button>Join me in my cooking sessions! </button>
+    <div class="plain-container">
+      <div class="main-content">
+        <h1>👩🏾‍🍳Kitchen Muse</h1>
+        <hr />
+
+        <h2>Explore Your Creativity by Cooking 🍳</h2>
+        <img
+          src="https://i.pinimg.com/564x/84/8b/a2/848ba2938b3ad792b0a4f3bf5c579ad3.jpg"
+          alt="cooking"
+          width="400"
+        />
+        <p>
+          Welcome to my world, where coding and cooking collide in a delightful
+          mix. I'm a <strong>software developer</strong> who loves getting
+          creative in the kitchen, and I want you to join me in Exploring Your
+          Creativity by Cooking. In the day, I tackle the coding maze, and at
+          night, my kitchen becomes a playground for imagination. This space
+          isn't just for developers—it's for those who, like me, find joy in
+          both fixing code and trying out new flavors. Join our community, where
+          the kitchen is a shared creative haven. From quick tricks on busy
+          workdays to fancy experiments on lazy weekends, experience the
+          satisfaction of balancing tech with taste. Let's transform our
+          kitchens into canvases where both code and cuisine shine.
+          <em
+            >Unleash your inner coder-chef—explore, experiment, and relish the
+            tasty results</em
+          >. Your coding masterpieces and culinary delights await, and I'm
+          thrilled to embark on this journey with you!
+          <br />
+        </p>
+
+        <span>
+          <a href="https://www.liketocook.com/benefits-of-cooking/"
+            >Cook for your mind</a
+          >
+        </span>
+
+        <button>Join me in my cooking sessions..!</button>
+
+        <p>
+          Built by: <br />
+          <strong><em>Mashudu Mphaphuli</em></strong>
+        </p>
+      </div>
     </div>
-    <script></script>
+
+    <script>
+      function canCook() {
+        let name = prompt("What is your name?");
+        let cook = prompt("Do you ever cook?");
+
+        if (cook == "yes" || cook == "Yes") {
+          alert("Cheers to more fun and creativity👌");
+        } else {
+          alert("You should start cooking and unlock your creativity😎");
+        }
+      }
+
+      let sessions = document.querySelector("button");
+      sessions.addEventListener("click", canCook);
+    </script>
   </body>
 </html>
